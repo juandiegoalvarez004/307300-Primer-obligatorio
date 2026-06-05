@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Staatliches&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    }
+
+    :root {
+    --color-principal: #25727c;
+    --color-principalOscuro: #04292e;
+    --color-secundario: #6dfdf1;
+    --fondo: #022724;
+    }
+
+    h1{
+    font-family: "Staatliches", sans-serif;
+    font-weight: 200;
+    }
+
+    h4{
+    font-family: "Staatliches", sans-serif;
+    font-weight: 200;
+    font-size: 2em;
+    margin: 0.5em;
+    }
+
+
+    /* -------HEADER---------- */
+
+    header{
+    background-color: #01abb48c;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+    }
+
+ .mobile{
+    display:block;
+}
+
+.links a{
+    display:none;
+}
+
+    #fondo{
+        color: rgb(175, 255, 255);
+    background-image: url(IMG/Fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 5vh;
+    }
+
+    #fondo h2{
+        font-size: 2em;
+        margin-top: 10em;
+        padding: 1em;   
+    }
+
+    #fondo p{
+        display: none;  
+    }
+
+
+    nav a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    }
+
+    nav a:hover{
+    transform: translateZ(30px) scale(1.2);
+}
+
+    /* -------FORMULARIO---------- */
+    #formulario article{
+        color: white;
+        padding: 1em;
+        background-color: var(--color-principalOscuro);
+       margin: 5vh;
+       display: flex;
+       flex-direction: column;
+       justify-items: center;
+       text-align: center;
+       border: none;
+       border-radius: 10px;
+    }
+
+    input{
+    margin: 0.2em;
+    padding: 1em;
+    border: none;
+    border-radius: 1em;
+    }
+
+
+    #formulario h3, #formulario p{
+    margin: 0.2em; 
+    }
+
+
+    /* ------------------FOTOS------------------------- */
+    
+    #fotos img{
+        display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+
+
+
+#fotos article{
+    position: relative;
+    text-align: center;
+}
+
+#fotos article h2{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    color: white;
+}
+
+#fotos article a{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    left: 0;
+    color: white;
+    padding: 10px;
+    background-color: #022724cc;
+    text-decoration: none;
+}
+
+
+
+
+    #fotos article:nth-child(6){
+        display: none;
+    }
+
+
+    /* --------------CARDS-------------- */
+    #porque{
+background-color: var(--fondo);
+padding: 1em 0 1em 0px;
+    }
+
+    #porque h2{
+        color: #6dfdf1;
+        padding: 1em;
+        text-align: center;
+    }
+
+
+    
+    #porque img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    
+    }
+
+    #porque article{
+        text-align: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        background-color: #25727c;
+        margin: 1em;
+        padding: 1em;
+        border-radius: 1em;
+        border: 0.5em #3fa5b3 solid ;
+    }
+
+    #porque a, #formulario a{
+        display: flex;
+        justify-content: center;
+        background-color: #c9f9ff;
+        font-family: "Staatliches", sans-serif;
+        font-size: 1.5em;
+        
+        text-decoration: none;
+        color: #04292e;
+        margin: 0.5em;
+        padding: 0.5em;
+        border-radius: 1em;
+    }
+
+        #porque article:nth-child(6) img{
+        display: none;
+    }
+
+    #porque article:nth-child(5) img{
+        display: none;
+    }
+
+    /* -------------FOOTER--------- */
+    footer img{
+        height: 1.5em;
+        margin: 0.2em;
+        
+    }
+
+    footer{
+        text-align: center;
+        margin: 1em;
+        justify-content: center;
+    }
+
+     
+
+/* -------------------TABLET--------------------- */
+@media all and (min-width:768px){
+
+   .mobile{
+    display:none;
+    }
+
+    .links a{
+    display:block;
+        margin: 1em;
+    }
+
+    nav{
+    display:flex;
+    }
+
+/* -------------------FOTOS TABLET--------------------- */
+
+    #fotos{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px 150px 200px;
+    }
+
+    #fotos article:nth-child(1){
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #fotos article:nth-child(2){
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #fotos article:nth-child(3){
+        grid-column: 2;
+        grid-row: span 2;
+    }
+
+
+    #fotos article:nth-child(4){
+        grid-column: span 2;
+    }
+
+    #fotos article:nth-child(5){
+        grid-column: 1;
+    }
+
+    #fotos article:nth-child(6){
+        display:flex;
+        grid-column: 2;
+    }
+
+    #fotos img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        display:flex;
+    }
+
+/* -------------------CARDS TABLET--------------------- */
+
+        #porque{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:auto 2fr 1fr 1fr;
+    }
+
+    #porque img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    
+    }
+
+    #porque h2{
+        grid-column:span 2;
+    }
+
+    
+    #porque article:nth-child(2){
+        grid-column:1;
+        grid-row:2;
+    }
+
+    
+    #porque article:nth-child(3){
+        grid-column:2;
+        grid-row:2;
+    }
+
+    #porque article:nth-child(4){
+        grid-column:1;
+        grid-row:span 2;
+    }
+
+    
+    #porque article:nth-child(5){
+        grid-column:2;
+        grid-row:3;
+    }
+
+    
+    #porque article:nth-child(6){
+        grid-column:2;
+        grid-row:4;
+    }
+
+    /* -------------FOOTER TABLET--------- */
+
+    footer{
+        display: flex;
+        text-align: center;
+        margin: 1em;
+        justify-content: right;
+    }
+
+    footer img{
+        padding: 0.2em;
+        height: 1.8em;
+    }
+    
+}
+
+
+
+
+
+/* -------------DESKTOP--------------------- */
+
+@media all and (min-width:1200px){
+
+    #fondo p{
+        display: block; 
+        padding: 2em;
+        max-width: 30em;
+    }
+
+    #formulario{
+        width:50vh;
+    }
+
+    /* -------------------FOTOS DESKTOP--------------------- */
+    #fotos{
+        
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows:250px 250px;
+    }
+
+    #fotos article:nth-child(1){
+        grid-column:1;
+        grid-row:1;
+    }
+
+    #fotos article:nth-child(2){
+        grid-column:1;
+        grid-row:2;
+    }
+
+    #fotos article:nth-child(3){
+        grid-column:2;
+        grid-row:span 2;
+    }
+
+    #fotos article:nth-child(4){
+        grid-column:span 2;
+    }
+
+    #fotos article:nth-child(5){
+        grid-column:3;
+        grid-row:2;
+    }
+
+    #fotos article:nth-child(6){
+        display:block;
+        grid-column:4;
+        grid-row:2;
+    }
+
+    /* -------------------FOTOS PORQUE--------------------- */
+
+     #porque{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:1em;
+    }
+
+    #porque h2{
+        width:100%;
+    }
+
+    #porque article{
+        width:30%;
+    }
+
+    #porque article:nth-child(5) img{
+        display:block;
+    }
+
+    #porque article:nth-child(6) img{
+        display:block;
+    }
+
+}
